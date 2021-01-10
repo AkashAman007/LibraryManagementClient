@@ -1,0 +1,14 @@
+html {
+    font-size: 10px;
+    font-family: sans-serif;
+}
+
+.info {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.no-content {
+    text-align: center;
+    font-size: 21px;
+}

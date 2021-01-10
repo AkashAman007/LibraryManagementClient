@@ -3,6 +3,41 @@ html {
     font-family: sans-serif;
 }
 
+
+.photo {
+    width: calc(100% + 4rem);
+    margin: -2rem 0rem 0rem -2rem;
+}
+
+button:hover {
+    border-color: blue;
+}
+
+
+.card-img-top {
+    height: 15rem;
+    object-fit: inherit;
+}
+.book-card {
+    flex-basis: calc(33% - 4rem);
+    margin: 0 2rem 3rem 2rem;
+    width: 18rem;
+}
+
+.book-grid {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.figure {
+    flex-basis: calc(33% - 4rem);
+    border: 1px solid #d3d3d3;
+    padding: 2rem;
+    margin: 0 2rem 2rem 2rem;
+}
+
 .info {
     width: 50%;
     margin: 0 auto;
@@ -11,4 +46,14 @@ html {
 .no-content {
     text-align: center;
     font-size: 21px;
+}
+
+.title {
+    font-size: 24px;
+    padding: 30px;
+    text-align: center;
+}
+
+.link {
+    font-size: 13px;
 }

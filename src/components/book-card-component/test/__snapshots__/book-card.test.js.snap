@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`library book card rendered 1`] = `
+<DocumentFragment>
+  <div
+    class="book-card card border-primary"
+  >
+    <img
+      class="card-img-top"
+      src="imageLink"
+    />
+    <div
+      class="card-body"
+    >
+      <div
+        class="mb-4 h3"
+      >
+        Title of Book
+      </div>
+      <div
+        class="mb-4 card-subtitle h6"
+      >
+        <span
+          class="text-muted"
+        >
+          Author Name
+        </span>
+        <span
+          class="float-right h5"
+        >
+          Available Qty. 
+          <span
+            class="badge badge-info"
+          >
+            10
+          </span>
+        </span>
+      </div>
+      <p
+        class="mb-4 card-text"
+      >
+        Book Description
+      </p>
+      <button
+        class="btn btn-primary btn-block btn-lg"
+        type="button"
+      >
+        Borrow
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`user borrowed book rendered 1`] = `
+<DocumentFragment>
+  <div
+    class="book-card card border-primary"
+  >
+    <img
+      class="card-img-top"
+      src="imageLink"
+    />
+    <div
+      class="card-body"
+    >
+      <div
+        class="mb-4 h3"
+      >
+        Title of Book
+      </div>
+      <div
+        class="mb-4 card-subtitle h6"
+      >
+        <span
+          class="text-muted"
+        >
+          Author Name
+        </span>
+      </div>
+      <p
+        class="mb-4 card-text"
+      >
+        Book Description
+      </p>
+      <button
+        class="btn btn-primary btn-block btn-lg"
+        type="button"
+      >
+        Return
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

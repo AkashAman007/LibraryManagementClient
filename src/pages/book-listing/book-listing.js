@@ -44,12 +44,12 @@ class BookListing extends Component {
         <div>
             <h1 className="title">
                 Available Books in Library
-                <Link className="float-right link" to="/MyBooks">
+                <Link data-testid="my-books-link" className="float-right link" to="/MyBooks">
                     See Borrowed Books
                 </Link>
             </h1>
 
-            <div className='photo-grid'>
+            <div className='book-grid'>
                 {this.state.books.length > 0 ? (
                     this.state.books.map((book, index) => <BookCard key={index} book = {book} onBorrowBook={this.onBorrowBook}/>
                 )

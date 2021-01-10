@@ -20,12 +20,12 @@ class UserBookListing extends Component {
         <div>
             <h1 className="title">
                 My Books
-                <Link className="float-right link" to="/">
+                <Link data-testid="library-books-link" className="float-right link" to="/">
                     View Books
                 </Link>
             </h1>
             {this.state.userBooks.length > 0 ? (
-                    <div className='photo-grid'> 
+                    <div className='book-grid'> 
                         {this.state.userBooks.map((book, index) => <BookCard key={index} book = {book} onReturnBook={this.onReturnBook} userListing={true}/>)}
                     </div>
                 ) : (

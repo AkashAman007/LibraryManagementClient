@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` renders main with book listing page 1`] = `
+<DocumentFragment>
+  <div>
+    <div>
+      <div>
+        <h1
+          class="title"
+        >
+          Available Books in Library
+          <a
+            class="float-right link"
+            data-testid="my-books-link"
+            href="/MyBooks"
+          >
+            See Borrowed Books
+          </a>
+        </h1>
+        <div
+          class="book-grid"
+        >
+          <div>
+            No books in library
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[` renders main with user book listing page 1`] = `
+<DocumentFragment>
+  <div>
+    <div>
+      <div>
+        <h1
+          class="title"
+        >
+          My Books
+          <a
+            class="float-right link"
+            data-testid="library-books-link"
+            href="/"
+          >
+            View Books
+          </a>
+        </h1>
+        <div
+          class="no-content"
+        >
+          You don't have any borrowed book
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

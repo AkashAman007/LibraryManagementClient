@@ -9,16 +9,12 @@ exports[` renders user book listing 1`] = `
       My Books
       <a
         class="float-right link"
+        data-testid="library-books-link"
         href="/"
       >
         View Books
       </a>
     </h1>
-    <div
-      class="info"
-    >
-      <div />
-    </div>
     <div
       class="no-content"
     >

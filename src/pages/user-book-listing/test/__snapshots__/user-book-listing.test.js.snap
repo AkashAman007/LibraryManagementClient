@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` renders user book listing 1`] = `
+<DocumentFragment>
+  <div>
+    <h1
+      class="title"
+    >
+      My Books
+      <a
+        class="float-right link"
+        href="/"
+      >
+        View Books
+      </a>
+    </h1>
+    <div
+      class="info"
+    >
+      <div />
+    </div>
+    <div
+      class="no-content"
+    >
+      You don't have any borrowed book
+    </div>
+  </div>
+</DocumentFragment>
+`;

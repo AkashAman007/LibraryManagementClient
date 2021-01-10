@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`book listing snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <h1
+      class="title"
+    >
+      Available Books in Library
+      <a
+        class="float-right link"
+        href="/MyBooks"
+      >
+        See Borrowed Books
+      </a>
+    </h1>
+    <div
+      class="info"
+    >
+      <div />
+    </div>
+    <div
+      class="photo-grid"
+    >
+      <div>
+        No books in library
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

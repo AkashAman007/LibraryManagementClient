@@ -26,6 +26,8 @@ export const BookCard = (props) => {
       <Card.Text className="mb-4">
             {description}
       </Card.Text>
+    </Card.Body>
+    <Card.Footer>
       {
         !userListing &&
         <Button variant="primary" size="lg" block onClick={() => {
@@ -38,6 +40,6 @@ export const BookCard = (props) => {
             onReturnBook(book);
         }}>Return</Button>
       }
-    </Card.Body>
+      </Card.Footer>
   </Card>
 }

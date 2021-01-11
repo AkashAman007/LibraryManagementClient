@@ -41,6 +41,10 @@ exports[`library book card rendered 1`] = `
       >
         Book Description
       </p>
+    </div>
+    <div
+      class="card-footer"
+    >
       <button
         class="btn btn-primary btn-block btn-lg"
         type="button"
@@ -83,6 +87,10 @@ exports[`user borrowed book rendered 1`] = `
       >
         Book Description
       </p>
+    </div>
+    <div
+      class="card-footer"
+    >
       <button
         class="btn btn-primary btn-block btn-lg"
         type="button"

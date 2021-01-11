@@ -5,6 +5,7 @@ import * as ApiService from "../../api-manager/api-service";
 import { AlertDismissible } from '../../components/alert-component/alert';
 import { getErrorMessage } from '../../common/error-message';
 import { TEST_USER_ID } from "../../common/util";
+import { Constants } from "../../common/constants";
 
 class UserBookListing extends Component {
 
@@ -70,7 +71,7 @@ class UserBookListing extends Component {
 
     loadAlert(apiResult) {
         const {error, errorCode} = apiResult;
-        const message = error ? getErrorMessage(errorCode) : "Returned Book Successfully";
+        const message = error ? getErrorMessage(errorCode) : Constants.RETURN_BOOK_SUCCESS_MESSAGE;
         this.setState({
             alert: { visible: true, error, message }
         });

@@ -5,6 +5,7 @@ import * as ApiService from "../../api-manager/api-service";
 import { AlertDismissible } from '../../components/alert-component/alert';
 import { getErrorMessage } from '../../common/error-message';
 import { TEST_USER_ID } from "../../common/util";
+import { Constants } from "../../common/constants";
 
 class BookListing extends Component {
 
@@ -43,7 +44,7 @@ class BookListing extends Component {
 
     loadAlert(apiResult) {
         const {error, errorCode} = apiResult;
-        const message = error ? getErrorMessage(errorCode) : "Returned Book Successfully";
+        const message = error ? getErrorMessage(errorCode) : Constants.BORROW_BOOK_SUCCESS_MESSAGE;
         this.setState({
             alert: { visible: true, error, message }
         });

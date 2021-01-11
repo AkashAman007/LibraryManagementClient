@@ -44,6 +44,7 @@ npm test
 Prominently two types of testing is done here
 1. Snapshot Testing
 2. DOM Testing
+The terminal might prompt to run all tests. Enter a
 
 
 ## Project Structure

@@ -29,17 +29,16 @@ export const sendGetRequest = async (url) => {
 
 
 const getApiResponse = (response) => {
-    const formattedResponse = {success: false, data: "", error: false, errorCode: 0};
-    console.log({response});
+    const apiResponse = {success: false, data: "", error: false, errorCode: 0};
     if(!response) {
-        return formattedResponse;
+        return apiResponse;
     }
     if(response.data && response.data.status && response.data.data !== undefined) {
-        formattedResponse.data = response.data.data;
-        formattedResponse.success = true;
-        return formattedResponse;
+        apiResponse.data = response.data.data;
+        apiResponse.success = true;
+        return apiResponse;
     }
-    formattedResponse.error = true;
-    formattedResponse.errorCode = response.data && response.data.code ? response.data.code: 50000;
-    return formattedResponse;
+    apiResponse.error = true;
+    apiResponse.errorCode = response.data && response.data.code ? response.data.code: 50000;
+    return apiResponse;
 }

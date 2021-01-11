@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alert Renders Error Message 1`] = `
+<DocumentFragment>
+  <div
+    class="fade alert alert-danger alert-dismissible show"
+    data-testid="alert-element"
+    role="alert"
+  >
+    <button
+      class="close"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+      >
+        ×
+      </span>
+      <span
+        class="sr-only"
+      >
+        Close alert
+      </span>
+    </button>
+    <div
+      class="alert-heading h4"
+    >
+      Error
+    </div>
+    <p>
+      Unavailable
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Alert Renders Success Message 1`] = `
+<DocumentFragment>
+  <div
+    class="fade alert alert-success alert-dismissible show"
+    data-testid="alert-element"
+    role="alert"
+  >
+    <button
+      class="close"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+      >
+        ×
+      </span>
+      <span
+        class="sr-only"
+      >
+        Close alert
+      </span>
+    </button>
+    <div
+      class="alert-heading h4"
+    >
+      Success!!
+    </div>
+    <p>
+      Success
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Alert renders nothing 1`] = `
+<DocumentFragment>
+  <div />
+</DocumentFragment>
+`;

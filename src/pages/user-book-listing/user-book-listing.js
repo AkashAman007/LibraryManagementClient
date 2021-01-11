@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import { BookCard } from '../../components/book-card-component/book-card';
 import {Link} from 'react-router-dom';
 import * as ApiService from "../../api-manager/api-service";
+import { AlertDismissible } from '../../components/alert-component/alert';
+import { getErrorMessage } from '../../common/error-message';
 import { TEST_USER_ID } from "../../common/util";
 
 class UserBookListing extends Component {
@@ -10,8 +12,12 @@ class UserBookListing extends Component {
         super();
         this.state = {
             userBooks : [],
+            alert: { visible: false, error: false, message: "" },
         }
         this.onReturnBook = this.onReturnBook.bind(this);
+        this.loadBorrowedBooks = this.loadBorrowedBooks.bind(this);
+        this.loadAlert = this.loadAlert.bind(this);
+        this.removeAlert = this.removeAlert.bind(this);
 
     }
 
@@ -24,6 +30,11 @@ class UserBookListing extends Component {
                     View Books
                 </Link>
             </h1>
+
+            <div className="info">
+                <AlertDismissible alert={this.state.alert}  removeAlert={this.removeAlert}></AlertDismissible>
+            </div>
+
             {this.state.userBooks.length > 0 ? (
                     <div className='book-grid'> 
                         {this.state.userBooks.map((book, index) => <BookCard key={index} book = {book} onReturnBook={this.onReturnBook} userListing={true}/>)}
@@ -54,6 +65,22 @@ class UserBookListing extends Component {
         if(result.success) {
             this.loadBorrowedBooks();
         }
+        this.loadAlert(result);
+    }
+
+    loadAlert(apiResult) {
+        const {error, errorCode} = apiResult;
+        const message = error ? getErrorMessage(errorCode) : "Returned Book Successfully";
+        this.setState({
+            alert: { visible: true, error, message }
+        });
+        setTimeout(this.removeAlert, 5000, false);
+    }
+
+    removeAlert() {
+        this.setState({
+            alert: { visible: false, error: false, message: "" },
+        });
     }
 
 }

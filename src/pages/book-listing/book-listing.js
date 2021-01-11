@@ -2,8 +2,9 @@ import React, {Component} from 'react';
 import { BookCard } from '../../components/book-card-component/book-card';
 import {Link} from 'react-router-dom';
 import * as ApiService from "../../api-manager/api-service";
+import { AlertDismissible } from '../../components/alert-component/alert';
+import { getErrorMessage } from '../../common/error-message';
 import { TEST_USER_ID } from "../../common/util";
-import "./styles.css";
 
 class BookListing extends Component {
 
@@ -15,6 +16,8 @@ class BookListing extends Component {
         }
         this.onBorrowBook = this.onBorrowBook.bind(this);
         this.loadBooks = this.loadBooks.bind(this);
+        this.loadAlert = this.loadAlert.bind(this);
+        this.removeAlert = this.removeAlert.bind(this);
     }
 
     componentDidMount() {
@@ -35,7 +38,22 @@ class BookListing extends Component {
         if(result.success) {
             this.loadBooks();
         }
+        this.loadAlert(result);
+    }
 
+    loadAlert(apiResult) {
+        const {error, errorCode} = apiResult;
+        const message = error ? getErrorMessage(errorCode) : "Returned Book Successfully";
+        this.setState({
+            alert: { visible: true, error, message }
+        });
+        setTimeout(this.removeAlert, 5000, false);
+    }
+
+    removeAlert() {
+        this.setState({
+            alert: { visible: false, error: false, message: "" },
+        });
     }
 
 
@@ -48,6 +66,10 @@ class BookListing extends Component {
                     See Borrowed Books
                 </Link>
             </h1>
+
+            <div className="info">
+                <AlertDismissible alert={this.state.alert}  removeAlert={this.removeAlert}></AlertDismissible>
+            </div>
 
             <div className='book-grid'>
                 {this.state.books.length > 0 ? (

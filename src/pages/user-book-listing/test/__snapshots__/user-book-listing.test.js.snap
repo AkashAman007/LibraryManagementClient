@@ -16,6 +16,11 @@ exports[` renders user book listing 1`] = `
       </a>
     </h1>
     <div
+      class="info"
+    >
+      <div />
+    </div>
+    <div
       class="no-content"
     >
       You don't have any borrowed book

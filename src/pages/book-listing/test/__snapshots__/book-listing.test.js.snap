@@ -16,6 +16,11 @@ exports[`renders book listing 1`] = `
       </a>
     </h1>
     <div
+      class="info"
+    >
+      <div />
+    </div>
+    <div
       class="book-grid"
     >
       <div>

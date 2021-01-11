@@ -18,6 +18,11 @@ exports[` renders main with book listing page 1`] = `
           </a>
         </h1>
         <div
+          class="info"
+        >
+          <div />
+        </div>
+        <div
           class="book-grid"
         >
           <div>
@@ -47,6 +52,11 @@ exports[` renders main with user book listing page 1`] = `
             View Books
           </a>
         </h1>
+        <div
+          class="info"
+        >
+          <div />
+        </div>
         <div
           class="no-content"
         >
